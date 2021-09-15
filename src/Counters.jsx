@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 const Counters = () => {
     const [name, setName] = useState("")
+    const [number, setNumber] = useState("")
+    const [address, setAddress] = useState("")
 
     const sendInfo = (info) => {
         // logic
@@ -10,16 +12,26 @@ const Counters = () => {
 
     return (
         <div>
-            <input type="text" onChange={e => setName(e.target.value)} />
-            
+            Name:
+            <input type="text" onChange={e => setName(e.target.value)} /><br />
+            Phone:
+            <input type="text" onChange={e => setNumber(e.target.value)} /><br />
+            Address:
+            <input type="text" onChange={e => setAddress(e.target.value)} /><br />
+
 
             <button onClick={() => 
                 sendInfo({
-                    name: name
+                    Name: name,
+                    Number: number,
+                    Address: address,
+
                 })
             }>Send</button>
         </div>
     )
+
 }
+
 
 export default Counters
