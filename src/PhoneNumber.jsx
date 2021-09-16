@@ -10,13 +10,22 @@ const PhoneNumber = () => {
 
     return (
         <div>
-            <input type="text" onChange={e => setNumber(e.target.value)} />
+            <form id="phoneNumber">
+                <input type="text" onChange={e => setNumber(e.target.value)} />
+            </form>
+            <button 
+                type="submit"
+                form='phoneNumber'
+                onClick={e => {
+                    e.preventDefault()
 
-            <button onClick={() =>
-                sendInfo({
-                    phonenumber: number
-                })    
-        }>send</button>
+                    sendInfo({
+                        phonenumber: number
+                    })
+                }
+                }>
+                    send
+            </button>
         </div>
     )
 }
