@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const PhoneNumber = () => {
     const [number, setNumber] = useState("")
 
+    useEffect(() => {
+        }, []
+    )
+
     const sendInfo = (info) => {
 
         console.log('sent', info)
+
     }
+
 
     return (
         <div>

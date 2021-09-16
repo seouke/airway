@@ -1,33 +1,37 @@
 import React, { useState } from 'react'
 
 const Counters = () => {
-    const [name, setName] = useState("")
-    const [number, setNumber] = useState("")
-    const [address, setAddress] = useState("")
+    const [info, setInfo] = useState({ name, number, address })
+    
 
     const sendInfo = (info) => {
         // logic
         console.log('sent', info)
+
     }
 
     return (
         <div>
-            Name:
-            <input type="text" onChange={e => setName(e.target.value)} /><br />
-            Phone:
-            <input type="text" onChange={e => setNumber(e.target.value)} /><br />
-            Address:
-            <input type="text" onChange={e => setAddress(e.target.value)} /><br />
+            <form>
+                Name:
+                <input type="text" onChange={e => setInfo({ name: e.target.value })} /><br />
+                Phone:
+                <input type="text" onChange={e => setInfo({ number: e.target.value })} /><br />
+                Address:
+                <input type="text" onChange={e => setInfo({ address: e.target.value })} /><br />
+            </form>
 
+            <button 
+                onClick={e =>  
+                    sendInfo({
+                        Name: info.name,
+                        Number: info.number,
+                        Address: info.address,
 
-            <button onClick={() => 
-                sendInfo({
-                    Name: name,
-                    Number: number,
-                    Address: address,
-
-                })
-            }>Send</button>
+                    })
+            }>
+                Send
+            </button>
         </div>
     )
 
