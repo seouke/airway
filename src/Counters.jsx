@@ -1,24 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
+import useInfo from './useInfo'
 
 const Counters = () => {
-    const [info, setInfo] = useState({ name, number, address })
+    const [info, onChange] = useInfo({ name: '', number: '', address: '' })
     
 
     const sendInfo = (info) => {
         // logic
         console.log('sent', info)
-
     }
 
     return (
         <div>
             <form>
                 Name:
-                <input type="text" onChange={e => setInfo({ name: e.target.value })} /><br />
+                <input type="text" onChange={onChange} name="name" /><br />
                 Phone:
-                <input type="text" onChange={e => setInfo({ number: e.target.value })} /><br />
+                <input type="text" onChange={onChange} name="number" /><br />
                 Address:
-                <input type="text" onChange={e => setInfo({ address: e.target.value })} /><br />
+                <input type="text" onChange={onChange} name="address" /><br />
             </form>
 
             <button 
