@@ -4,20 +4,18 @@ const PhoneNumber = () => {
     const [number, setNumber] = useState("")
 
     useEffect(() => {
-        }, []
-    )
+        console.log('test', number)
+    }, [number])
 
     const sendInfo = (info) => {
-
         console.log('sent', info)
-
+        setNumber("")
     }
-
 
     return (
         <div>
             <form id="phoneNumber">
-                <input type="text" onChange={e => setNumber(e.target.value)} />
+                <input type="text" onChange={e => setNumber(e.target.value)} value={number} />
             </form>
             <button 
                 type="submit"

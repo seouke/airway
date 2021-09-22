@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 
 const Counters = () => {
-    const [info, setInfo] = useState({ name, number, address })
+    const [info, setInfo] = useState({ name: "", number: "", address: "" })
     
 
     const sendInfo = (info) => {
         // logic
         console.log('sent', info)
-
     }
 
     return (
