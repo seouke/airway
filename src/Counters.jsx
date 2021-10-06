@@ -14,7 +14,7 @@ const Counters = () => {
             <form>
                 Name:
                 <input type="text" onChange={e => setInfo({ name: e.target.value })} /><br />
-                Phone:
+                PhoneNumber:
                 <input type="text" onChange={e => setInfo({ number: e.target.value })} /><br />
                 Address:
                 <input type="text" onChange={e => setInfo({ address: e.target.value })} /><br />
