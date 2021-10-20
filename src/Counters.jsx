@@ -12,7 +12,7 @@ const Counters = () => {
     return (
         <div>
             <form>
-                Name:
+                firstName:
                 <input type="text" onChange={e => setInfo({ name: e.target.value })} /><br />
                 PhoneNumber:
                 <input type="text" onChange={e => setInfo({ number: e.target.value })} /><br />

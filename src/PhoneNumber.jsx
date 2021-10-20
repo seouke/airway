@@ -19,7 +19,7 @@ const PhoneNumber = () => {
     return (
         <div>
             <form id="phoneNumber">
-                <input type="text" onChange={e => setNumber(e.target.value)} value={number} />
+                <input type="text" onChange={e => setNumber(e.target.value)} value={text} />
             </form>
             <button 
                 type="submit"
